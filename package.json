@@ -2,7 +2,7 @@
     "name": "shiba-syntax-highlight",
     "displayName": "Shiba syntax highlight",
     "version": "0.0.1",
-    "publisher": "shiba",
+    "publisher": "Shiba-lang",
     "description": "Syntax highlight for Shiba lang",
     "author": {"name": "ldakhoa"},
     "categories": [
@@ -11,6 +11,7 @@
     "engines": {
         "vscode": "^1.51.0"
     },
+    "icon": "images/Shiba_icon.png",
     "contributes": {
         "languages": [{
             "id": "shiba",
@@ -26,6 +27,6 @@
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/shiba-lang/vscode-syntax-highlight"
     }
 }

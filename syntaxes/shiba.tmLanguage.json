@@ -68,10 +68,6 @@
           "name": "keyword.cast.shiba"
         },
         {
-          "match":"(?<!\\$)\\b(break|case|continue|default|if|else|for|in|while|return|switch)\\b(?!\\$)",
-          "name": "keyword.control.shiba"
-        },
-        {
           "match": "\\?|:",
           "name": "keyword.operator.ternary.shiba"
         },
@@ -96,17 +92,13 @@
           "name": "keyword.operator.logical.shiba"
         },
         {
-          "match": "(?<!\\$)\\b(fn|init|deinit|extension|sizeOf|type|nil|mut|let|return|enum)\\b(?!\\$)",
+          "match": "(?<!\\$)\\b(fn|init|deinit|extension|sizeOf|type|nil|while|for|in|continue|if|else|mut|let|return|enum|switch|case|break|default|true|false)\\b(?!\\$)",
           "name": "keyword.declaration.shiba"
         }
       ]
     },
     "constants-and-special-vars": {
       "patterns": [
-        {
-          "match": "(?<!\\$)\\b(true|false|nil)\\b(?!\\$)",
-          "name": "constant.language.shiba"
-        },
         {
           "match": "\\w*(?::(?:\\w*:)*(\\w*))?",
           "captures": {
