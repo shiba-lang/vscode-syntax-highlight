@@ -1,0 +1,1 @@
+# shiba-syntax-highlight

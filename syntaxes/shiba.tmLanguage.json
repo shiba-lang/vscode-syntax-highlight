@@ -1,0 +1,135 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "shiba",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+    },
+    {
+      "include": "constants-and-special-vars"
+    },
+    {
+      "include": "punctuation"
+    }
+	],
+	"repository": {
+		"strings": {
+			"name": "string.quoted.double.shiba",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.shiba",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments-doc": {
+			"patterns": [
+				{
+					"begin": "///",
+					"while": "^\\s*///",
+					"patterns": [
+						{
+							"name": "comment.block.documentation.shiba"
+						}
+					]
+				}
+			]
+		},
+		"comments-inline": {
+			"patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "comment.line.double-slash.shiba"
+            }
+          },
+          "match": "((//).*)$"
+        }
+      ]
+    },
+    "comments-block": {
+      "patterns": [
+        {
+          "begin": "/\\*",
+          "end": "\\*/",
+          "name": "comment.block.shiba"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "(?<!\\$)\\bas\\b(?!\\$)",
+          "name": "keyword.cast.shiba"
+        },
+        {
+          "match":"(?<!\\$)\\b(break|case|continue|default|if|else|for|in|while|return|switch)\\b(?!\\$)",
+          "name": "keyword.control.shiba"
+        },
+        {
+          "match": "\\?|:",
+          "name": "keyword.operator.ternary.shiba"
+        },
+        {
+          "match": "(<<|>>?|\\^|\\||&)",
+          "name": "keyword.operator.bitwise.shiba"
+        },
+        {
+          "match": "((&|\\^|\\||<<|>>|\\||%|\\*|\/|\\^?)=)",
+          "name": "keyword.operator.assignment.bitwise.shiba"
+        },
+        {
+          "match": "(=)",
+          "name": "keyword.operator.assignment.shiba"
+        },
+        {
+          "match": "(\\-\\=|\\+\\=)",
+          "name": "keyword.operator.increment-decrement.shiba"
+        },
+        {
+          "match": "(!|&&|\\|\\|)",
+          "name": "keyword.operator.logical.shiba"
+        },
+        {
+          "match": "(?<!\\$)\\b(fn|init|deinit|extension|sizeOf|type|nil|mut|let|return|enum)\\b(?!\\$)",
+          "name": "keyword.declaration.shiba"
+        }
+      ]
+    },
+    "constants-and-special-vars": {
+      "patterns": [
+        {
+          "match": "(?<!\\$)\\b(true|false|nil)\\b(?!\\$)",
+          "name": "constant.language.shiba"
+        },
+        {
+          "match": "\\w*(?::(?:\\w*:)*(\\w*))?",
+          "captures": {
+            "1": {
+              "name": "entity.name.function.shiba"
+            }
+          }
+        },
+        {
+          "match": "\\b[0-9]+(?:\\.[0-9]+)*\\b",
+          "name": "constant.numeric.shiba"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "match": ";",
+          "name": "punctuation.terminator.shiba"
+        }
+      ]
+    }
+  },
+  
+	"scopeName": "source.shiba"
+}
