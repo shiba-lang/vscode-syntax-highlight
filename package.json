@@ -1,10 +1,12 @@
 {
     "name": "shiba-syntax-highlight",
     "displayName": "Shiba syntax highlight",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "Shiba-lang",
     "description": "Syntax highlight for Shiba lang",
-    "author": {"name": "ldakhoa"},
+    "author": {
+        "name": "ldakhoa"
+    },
     "categories": [
         "Programming Languages"
     ],
@@ -13,17 +15,26 @@
     },
     "icon": "images/Shiba_icon.png",
     "contributes": {
-        "languages": [{
-            "id": "shiba",
-            "aliases": ["shiba", "shiba"],
-            "extensions": [".shiba"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "shiba",
-            "scopeName": "source.shiba",
-            "path": "./syntaxes/shiba.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "shiba",
+                "aliases": [
+                    "shiba",
+                    "shiba"
+                ],
+                "extensions": [
+                    ".shiba"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "shiba",
+                "scopeName": "source.shiba",
+                "path": "./syntaxes/shiba.tmLanguage.json"
+            }
+        ]
     },
     "repository": {
         "type": "git",
